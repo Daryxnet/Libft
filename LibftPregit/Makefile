@@ -6,33 +6,27 @@
 #    By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/13 11:15:51 by dagarmil          #+#    #+#              #
-#    Updated: 2024/06/13 12:47:42 by dagarmil         ###   ########.fr        #
+#    Updated: 2024/06/17 14:53:06 by dagarmil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-all: libft.a
-SRCS = ./srcs
-INCLUDES = ./includes
+NAME = libft.a
+all: $(NAME)
 CFLAGS = -Wall -Wextra -Werror
 
-OBJS := ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o 
-OBJS := $(addprefix $(SRCS)/, $(OBJS))
-
-LIB = $(INCLUDES)/libft.h
+OBJS = ft_isdigit.o ft_isalpha.o
 
 libft.a : $(OBJS)
 	ar rcs $@ $<
 
-$(SRCS)/%.o : $(SRCS)/%.c
-	cc -c -I$(INCLUDE) $(CFLAGS) $< -o $@
-
-.PHONY: all clean fclean re
+%.o : %.c
+	cc -c -I./libft.h $(CFLAGS) $< -o $@
 
 clean:
-	rm -rf $(SRCS)/*.o
+	rm -rf ./*.o
 
-fclean:
-	rm -f $(SRCS)/*.o libft.a
+fclean: clean
+	rm -rf $(NAME)
 
-re:
-	make fclean all
+re: fclean all
+.PHONY: all clean fclean re
