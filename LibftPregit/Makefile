@@ -6,18 +6,18 @@
 #    By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/13 11:15:51 by dagarmil          #+#    #+#              #
-#    Updated: 2024/06/17 14:53:06 by dagarmil         ###   ########.fr        #
+#    Updated: 2024/06/17 15:11:54 by dagarmil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-all: $(NAME)
 CFLAGS = -Wall -Wextra -Werror
-
 OBJS = ft_isdigit.o ft_isalpha.o
 
-libft.a : $(OBJS)
-	ar rcs $@ $<
+all: $(NAME)
+
+$(NAME) : $(OBJS)
+	ar rcs $@ $(OBJS)
 
 %.o : %.c
 	cc -c -I./libft.h $(CFLAGS) $< -o $@
