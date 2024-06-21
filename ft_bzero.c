@@ -6,11 +6,13 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 10:31:52 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/21 10:32:55 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/06/21 11:38:54 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
-	
+	ft_memset(s, 0, n);
 }

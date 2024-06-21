@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/17 13:27:32 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/21 15:39:45 by dagarmil         ###   ########.fr       */
+/*   Created: 2024/06/21 12:07:28 by dagarmil          #+#    #+#             */
+/*   Updated: 2024/06/21 14:34:07 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-#include <aio.h>
+#include "libft.h"
+//#include <stdio.h>
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_strlen(const char *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned int	i;
 
-#endif
+	i = 0;
+	while (i < n)
+	{
+		((char *)dest)[i] = ((const char *)src)[i];
+		i++;
+	}
+	return (dest);
+}
+/*
+int	main(int ac, char **av)
+{
+	int	i;
+	char	*buff;
+
+	i = 2;
+	while (i < ac)
+	{
+		buff = ft_memcpy(av[1], av[2], 5);
+		printf("%s\n", buff);
+		i++;
+	}
+	return 0;
+}*/
