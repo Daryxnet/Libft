@@ -6,13 +6,19 @@
 #    By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/13 11:15:51 by dagarmil          #+#    #+#              #
-#    Updated: 2024/06/17 15:46:33 by dagarmil         ###   ########.fr        #
+#    Updated: 2024/06/21 10:01:12 by dagarmil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
-OBJS = ft_isdigit.o ft_isalpha.o ft_isalnum.o
+OBJS = ft_isdigit.o \
+       ft_isalpha.o \
+       ft_isalnum.o \
+       ft_isascii.o \
+       ft_isprint.o \
+       ft_strlen.o \
+       ft_memset.o
 
 all: $(NAME)
 

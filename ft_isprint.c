@@ -1,45 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 11:56:15 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/21 11:29:20 by dagarmil         ###   ########.fr       */
+/*   Created: 2024/06/18 11:07:05 by dagarmil          #+#    #+#             */
+/*   Updated: 2024/06/18 11:11:48 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <aio.h>
-//#include <stdio.h>
-
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_isprint(int c)
 {
-	unsigned char	*punt;
-	size_t	i;
-
-	i = 0;
-	punt = s;
-	while (i < n)
-	{
-		punt[i] = (unsigned char)c;
-		i++;
-	}
-	return (s);
+	if (c >= 32 && c <= 126)
+	       return (1);
+	return (0);	
 }
-/*
-int	main(int ac, char **av)
-{
-	int	i;
-	char	*new;
-
-
-	i = 1;
-	while (i < ac)
-	{
-		new = ft_memset(av[1], 42, 5);
-		printf("%s\n", new);	
-		i++;
-	}
-	return 0;
-}*/

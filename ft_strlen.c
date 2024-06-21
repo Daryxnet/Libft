@@ -1,45 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 11:56:15 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/21 11:29:20 by dagarmil         ###   ########.fr       */
+/*   Created: 2024/06/18 11:24:24 by dagarmil          #+#    #+#             */
+/*   Updated: 2024/06/18 11:48:21 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <aio.h>
-//#include <stdio.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+size_t	ft_strlen(const char *s)
 {
-	unsigned char	*punt;
 	size_t	i;
 
 	i = 0;
-	punt = s;
-	while (i < n)
-	{
-		punt[i] = (unsigned char)c;
+	while (s[i] != '\0')
 		i++;
-	}
-	return (s);
+	return (i);
 }
-/*
-int	main(int ac, char **av)
-{
-	int	i;
-	char	*new;
-
-
-	i = 1;
-	while (i < ac)
-	{
-		new = ft_memset(av[1], 42, 5);
-		printf("%s\n", new);	
-		i++;
-	}
-	return 0;
-}*/

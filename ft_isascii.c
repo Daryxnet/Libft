@@ -6,11 +6,13 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 15:52:12 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/17 15:53:04 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/06/18 10:55:22 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isasscii(int c)
+int	ft_isascii(int c)
 {
-	
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

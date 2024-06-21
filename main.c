@@ -1,14 +1,19 @@
 #include "libft.h"
 #include <stdio.h>
+#include <aio.h>
 
-int	main()
+int	main(int ac, char **av)
 {
-	char	let;
+	int	i;
 
-	let = 'G';
-	if (ft_isalnum(let))
-		printf("es un numero o un digito");
-	else
-		printf("no es ni letra ni digito");
+	i = 0;
+	while (i < ac)
+	{
+		if ((ft_strlen(av[i])) <= 3)
+			printf("La str tiene 3 letras o menos\n");
+		else
+			printf("La str tiene mas de 3 letras");
+		i++;
+	}
 	return (0);
 }
