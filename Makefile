@@ -6,7 +6,7 @@
 #    By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/13 11:15:51 by dagarmil          #+#    #+#              #
-#    Updated: 2024/06/21 15:38:25 by dagarmil         ###   ########.fr        #
+#    Updated: 2024/06/26 12:25:08 by dagarmil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,17 @@ OBJS = ft_isdigit.o \
        ft_bzero.o \
        ft_memcpy.o \
        ft_tolower.o \
-       ft_toupper.o
+       ft_toupper.o \
+       ft_memmove.o \
+       ft_strlcpy.o \
+       ft_strlcat.o \
+       ft_strchr.o \
+       ft_strrchr.o \
+       ft_strncmp.o \
+       ft_memchr.o \
+       ft_memcmp.o \
+       ft_strnstr.o \
+       ft_atoi.o
 
 all: $(NAME)
 

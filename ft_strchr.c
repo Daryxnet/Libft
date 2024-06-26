@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 15:18:26 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/25 11:41:59 by dagarmil         ###   ########.fr       */
+/*   Created: 2024/06/25 15:21:08 by dagarmil          #+#    #+#             */
+/*   Updated: 2024/06/25 15:30:04 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	*de;
-	unsigned char	*sr;
-
-	de = (unsigned char *)dest;
-	sr = (unsigned char *)src;
-	if (de >= sr)
+	while (*s)
 	{
-		while (n--)
-			de[n] = sr[n];
+		if (*s == c)
+			return ((char*)s);
+		s++;
 	}
-	else
-		ft_memcpy(de, sr, n);
-
-
-	return (dest);
+	if (c == '\0')
+		return ((char *)s);
+	return (0);
 }

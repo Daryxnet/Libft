@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 15:18:26 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/25 11:41:59 by dagarmil         ###   ########.fr       */
+/*   Created: 2024/06/26 11:27:55 by dagarmil          #+#    #+#             */
+/*   Updated: 2024/06/26 11:42:38 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned char	*de;
-	unsigned char	*sr;
+	size_t	b;
+	size_t	l;
 
-	de = (unsigned char *)dest;
-	sr = (unsigned char *)src;
-	if (de >= sr)
+	b = 0;
+	if (little[b] == '\0')
+		return ((char *)big);
+	while (big[b])
 	{
-		while (n--)
-			de[n] = sr[n];
+		l = 0;
+		while (big[b + l] == little[l] && (b + l) < len)
+		{
+			if (big[b + l] == '\0' && little[l] == '\0')
+				return ((char *)big + b);
+			l++;
+		}
 	}
-	else
-		ft_memcpy(de, sr, n);
-
-
-	return (dest);
+	return (0);
 }

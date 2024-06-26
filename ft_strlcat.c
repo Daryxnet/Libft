@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 15:18:26 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/25 11:41:59 by dagarmil         ###   ########.fr       */
+/*   Created: 2024/06/25 12:09:41 by dagarmil          #+#    #+#             */
+/*   Updated: 2024/06/25 12:23:14 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned char	*de;
-	unsigned char	*sr;
+	size_t	dstlen;
+	size_t	srclen;
+	size_t	i;
 
-	de = (unsigned char *)dest;
-	sr = (unsigned char *)src;
-	if (de >= sr)
-	{
-		while (n--)
-			de[n] = sr[n];
-	}
+	dstlen = ft_strlen(dest);
+	srclen = ft_strlen(src);
+	i = 0;
+	if (size == 0)
+		return (srclen);
+	if (size <= dstlen)
+		return (srclen += size);
 	else
-		ft_memcpy(de, sr, n);
-
-
-	return (dest);
+		return (srclen += dstlen);
+	while (src[i] != '\0' && dstlen < (size - 1) && dest != src)
+	{
+		dest[dstlen] = src[i];
+		i++;
+		dstlen++;
+	}
+	dest[dstlen] = '\0';
+	return (srclen);
 }

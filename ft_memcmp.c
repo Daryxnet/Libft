@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/21 15:18:26 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/25 11:41:59 by dagarmil         ###   ########.fr       */
+/*   Created: 2024/06/26 11:08:19 by dagarmil          #+#    #+#             */
+/*   Updated: 2024/06/26 11:20:34 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*de;
-	unsigned char	*sr;
+	size_t	i;
+	unsigned const char	*str1;
+	unsigned const char	*str2;
 
-	de = (unsigned char *)dest;
-	sr = (unsigned char *)src;
-	if (de >= sr)
+	i = 0;
+	str1 = (unsigned const char *)s1;
+	str2 = (unsigned const char *)s2;
+	while (i < n)
 	{
-		while (n--)
-			de[n] = sr[n];
+		if (*str1 != *str2)
+		{
+			return ((int)(*str1 - *str2));
+		}
+		str1++;
+		str2++;
+		i++;
 	}
-	else
-		ft_memcpy(de, sr, n);
-
-
-	return (dest);
+	return (0);
 }
