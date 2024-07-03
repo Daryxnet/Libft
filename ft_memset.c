@@ -6,7 +6,7 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:56:15 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/21 11:29:20 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/06/27 13:39:17 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*punt;
-	size_t	i;
+	size_t			i;
 
 	i = 0;
 	punt = s;

@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <aio.h>
 
-int	main(int ac, char **av)
+int	main()
 {
-	int	i;
+	/*int	i;
 
 	i = 1;
 	while (i < ac)
@@ -17,5 +17,22 @@ int	main(int ac, char **av)
 		printf("%s\n", av[1]);
 		i++;
 	}
+	return (0);*/
+	int	*test;
+	int	i;
+	int	n;
+	int	len;
+
+	i = 0;
+	n = 10;
+	test = (int *)ft_calloc(n, sizeof(int));
+	len = sizeof(test);
+	printf("size de test: %i\n", len);
+	while (i < n)
+	{
+		printf("pnt con calloc igual:%i\n", test[i]);
+		i++;
+	}
+	free(test);
 	return (0);
 }
