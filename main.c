@@ -51,12 +51,19 @@ int	main()
 	}
 	free(narray);*/
 //Test de itoa
-	int		num;
+	/*int		num;
 	char	*newstr;
 
 	num = 115;
 	newstr = ft_itoa(num);
 	printf("La str del numero %d es: %s\n", num, newstr);
-	free(newstr);
+	free(newstr);*/
+//Test de Mapi
+	char	*newstr;
+	char	*s;
+
+	s = "Hola perro"; 
+	newstr = ft_strmapi(s, ft_toupper);
+	printf("la antigua str es:\n %s y la nueva:\n %s", s, newstr);
 	return 0;
 }
