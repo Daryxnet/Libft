@@ -6,7 +6,7 @@
 #    By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/13 11:15:51 by dagarmil          #+#    #+#              #
-#    Updated: 2024/07/03 11:08:34 by dagarmil         ###   ########.fr        #
+#    Updated: 2024/07/08 11:52:01 by dagarmil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,9 @@ OBJS = ft_isdigit.o \
 	   ft_strdup.o \
 	   ft_substr.o \
 	   ft_strjoin.o \
-	   ft_strtrim.o
+	   ft_strtrim.o \
+	   ft_split.o \
+	   ft_itoa.o
 
 all: $(NAME)
 

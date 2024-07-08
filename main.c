@@ -18,7 +18,7 @@ int	main()
 		i++;
 	}
 	return (0);*/
-	int	*test;
+/*	int	*test;
 	int	i;
 	int	n;
 	int	len;
@@ -33,6 +33,30 @@ int	main()
 		printf("pnt con calloc igual:%i\n", test[i]);
 		i++;
 	}
-	free(test);
-	return (0);
+	free(test);*/
+//Test de split
+/*	char	*str;
+	char	**narray;
+	char	x;
+	int		i;
+
+	x = ' ';
+	i = 0;
+	str = "      Ho la Co mo Es tas   ";
+	narray = ft_split(str, x);
+	while (narray[i])
+	{
+		printf("strings resultantes: %s\n", narray[i]);
+		i++;
+	}
+	free(narray);*/
+//Test de itoa
+	int		num;
+	char	*newstr;
+
+	num = 115;
+	newstr = ft_itoa(num);
+	printf("La str del numero %d es: %s\n", num, newstr);
+	free(newstr);
+	return 0;
 }
