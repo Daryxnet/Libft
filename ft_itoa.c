@@ -6,7 +6,7 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 13:48:58 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/07/08 11:48:15 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/07/09 14:58:58 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ char	*ft_itoa(int n)
 
 	num = n;
 	numlen = cnt_digt(n);
-	str = malloc(sizeof(char)*(numlen + 1));
+	str = malloc(sizeof(char) * (numlen + 1));
 	if (!str)
 		return (NULL);
-	if (num  < 0)
+	if (num < 0)
 	{
 		str[0] = '-';
 		num = -num;
@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 	str[numlen--] = '\0';
 	while (num)
 	{
-		str[numlen] = ((num % 10)+ '0');
+		str[numlen] = (num % 10) + '0';
 		num /= 10;
 		numlen--;
 	}

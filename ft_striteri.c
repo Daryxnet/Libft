@@ -6,7 +6,7 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 13:14:25 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/07/08 13:27:28 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/07/09 14:59:42 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int	i;
 
 	if (!s || !f)
-		return;
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{

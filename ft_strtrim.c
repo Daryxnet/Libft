@@ -6,7 +6,7 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 10:48:13 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/07/03 10:57:52 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/07/09 14:54:19 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	while (ft_strchr(set, s1[start]) && start <= end) 
+	while (ft_strchr(set, s1[start]) && start <= end)
 		start++;
 	if (start > end)
 		return (ft_strdup(s1 + end +1));
 	while (ft_strchr(set, s1[end]) && end >= 0)
 		end--;
 	str = malloc(end - start);
-	if(!str)
+	if (!str)
 		return (NULL);
 	ft_strlcpy(str, &s1[start], end - start + 2);
 	return (str);

@@ -6,13 +6,12 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 11:10:35 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/07/05 13:36:06 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/07/09 14:49:58 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//words counter
 static int	count_words(char const *s, char c)
 {
 	int	cw;
@@ -34,7 +33,7 @@ static int	count_words(char const *s, char c)
 	cw++;
 	return (cw);
 }
-//Free FT
+
 static void	*ft_free(char **memo, size_t buff)
 {
 	size_t	i;
@@ -48,7 +47,7 @@ static void	*ft_free(char **memo, size_t buff)
 	free(memo);
 	return (NULL);
 }
-//Array F
+
 static void	ft_armk(char **array, char *nstr, char c, int cws)
 {
 	int		i;
@@ -64,7 +63,7 @@ static void	ft_armk(char **array, char *nstr, char c, int cws)
 			if (array == 0)
 			{
 				ft_free(array, i);
-				return;
+				return ;
 			}
 			while (*strchr == c)
 				strchr++;

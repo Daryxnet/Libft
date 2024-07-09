@@ -6,7 +6,7 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 13:29:53 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/07/08 14:52:13 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/07/09 14:54:57 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c, 1);	
+	write (fd, &c, 1);
 }
